@@ -1,5 +1,6 @@
 import {Inter} from "next/font/google";
 import "./globals.css";
+import '@reown/appkit/react/styles.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={inter.className}
       >
         <contextProvider cookies={cookies}>{children}</contextProvider>
       </body>
