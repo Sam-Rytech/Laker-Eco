@@ -4,7 +4,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import { headers } from "next/headers";
-import contextProvider from "@/context/index";
+import contextProvider from "@/context";
 
 export const metadata = {
   title: "Create Next App",
