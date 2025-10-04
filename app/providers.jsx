@@ -15,7 +15,7 @@ if (!projectId) {
 
 // Initialize AppKit modal once
 createAppKit({
-  adapters: [wagmiAdapter],
+  adapters: [wagmiAdapter], // ✅ must be "adapters"
   projectId,
   networks: [mainnet, base],
   defaultNetwork: mainnet,
@@ -27,6 +27,7 @@ createAppKit({
   },
   themeMode: 'light',
 })
+
 
 export function Providers({ children, cookies }) {
   const initialState = cookieToInitialState(wagmiAdapter.wagmiConfig, cookies)
