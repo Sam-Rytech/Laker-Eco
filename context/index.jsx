@@ -18,13 +18,17 @@ const metadata = {
     url: "https://laker-eco.vercel.app",
     icons: ["https://laker-eco.vercel.app/favicon.ico"]
 };
-const modal: createAppKit({
-    adapter: [wagmiAdapter], projectId, networks: [mainnet, base], defaultNetwork: mainnet, features: {
+const modal = createAppKit({
+    adapter: [wagmiAdapter],
+    projectId,
+    networks: [mainnet, base],
+    defaultNetwork: mainnet,
+    features: {
         analytics: true,
         email: true,
         socials: ["google", "github", "discord"],
         emailShowWallet: true,
     },
     themeMode: "light",
-})
+});
 
