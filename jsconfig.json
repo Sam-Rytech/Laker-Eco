@@ -3,5 +3,8 @@
     "paths": {
       "@/*": ["./*"]
     }
-  }
+  },
+  "exclude": [
+    "config/index.tsx"
+  ]
 }
