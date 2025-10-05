@@ -5,8 +5,9 @@ import { Providers } from './providers'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Laker Eco',
-  description: 'An ecosystem for Lakers',
+  title: 'Laker Eco - Stake & Earn',
+  description:
+    'An ecosystem for Lakers - Claim free tokens and earn through staking',
 }
 
 export default function RootLayout({ children }) {
