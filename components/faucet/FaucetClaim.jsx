@@ -1,7 +1,7 @@
 'use client'
 
 import { useAccount } from 'wagmi'
-import { useFaucet } from '../hooks/useFaucet'
+import { useFaucet } from '@/hooks/useFaucet'
 import { formatTokenAmount, formatDuration } from '../../utils/formatters'
 import { TOKEN_SYMBOL } from '../../utils/constants'
 import Card from '../../components/ui/Card'
@@ -36,7 +36,7 @@ export default function FaucetClaim() {
     return (
       <Card className="text-center">
         <div className="py-12">
-          <div className="w-20 h-20 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center">
+          <div className="flex items-center justify-center w-20 h-20 mx-auto mb-6 bg-blue-100 rounded-full">
             <svg
               className="w-10 h-10 text-blue-600"
               fill="none"
@@ -51,10 +51,10 @@ export default function FaucetClaim() {
               />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-gray-800 mb-2">
+          <h3 className="mb-2 text-xl font-bold text-gray-800">
             Connect Your Wallet
           </h3>
-          <p className="text-gray-600 mb-6">
+          <p className="mb-6 text-gray-600">
             Please connect your wallet to claim free {TOKEN_SYMBOL} tokens
           </p>
           <w3m-button />
@@ -66,26 +66,26 @@ export default function FaucetClaim() {
   return (
     <Card>
       <div className="text-center">
-        <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <h2 className="mb-2 text-3xl font-bold text-gray-800">
           Claim Free Tokens
         </h2>
-        <p className="text-gray-600 mb-8">
+        <p className="mb-8 text-gray-600">
           Get {formatTokenAmount(claimAmount.toString())} {TOKEN_SYMBOL} every
           24 hours
         </p>
 
-        <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 mb-8">
-          <div className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 mb-2">
+        <div className="p-8 mb-8 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl">
+          <div className="mb-2 text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">
             {formatTokenAmount(claimAmount.toString())}
           </div>
-          <div className="text-xl text-gray-700 font-semibold">
+          <div className="text-xl font-semibold text-gray-700">
             {TOKEN_SYMBOL}
           </div>
         </div>
 
         {!canClaim && timeUntilNextClaim > 0 && (
-          <div className="mb-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-            <p className="text-yellow-800 font-semibold">
+          <div className="p-4 mb-6 border border-yellow-200 rounded-lg bg-yellow-50">
+            <p className="font-semibold text-yellow-800">
               ⏰ Next claim available in: {formatDuration(timeUntilNextClaim)}
             </p>
           </div>
@@ -100,7 +100,7 @@ export default function FaucetClaim() {
           {canClaim ? 'Claim Tokens' : 'Cooldown Active'}
         </Button>
 
-        <p className="text-sm text-gray-500 mt-4">
+        <p className="mt-4 text-sm text-gray-500">
           * You can claim once every 24 hours
         </p>
       </div>
