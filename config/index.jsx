@@ -4,7 +4,7 @@ import { cookieStorage, createStorage } from '@wagmi/core'
 import { WagmiAdapter } from '@reown/appkit-adapter-wagmi'
 import { mainnet, base } from '@reown/appkit/networks'
 
-export const projectId = process.env.NEXT_PUBLIC_PROJECT_ID
+export const projectId = f579285fe2d1f128b9a30434426c3a6b
 
 if (!projectId) {
   throw new Error('Project ID is not defined')
